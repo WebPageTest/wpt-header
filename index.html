@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebPageTest Global Nav</title>
+    <link rel="stylesheet" href="wpt-header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <wpt-header>
+        <header>
+            <a class="wptheader_logo" href="/">
+                <img src="wpt-logo.svg" alt="WebPageTest, by Catchpoint" />
+            </a>
+            <details class="wptheader_menu">
+                <summary class="wptheader_menubtn">Menu:</summary>
+                <nav>
+                    <ul class="wptheader_nav">
+                        <li><a href="/" class="wptheader-current">Start Test</a></li>
+                        <li><a href="/testlog/1/">Test History</a></li>
+                        <li class="wptheader_nav_menu">
+                            <details>
+                                <summary>Products</summary>
+                                <div class="wptheader_nav_menu_content">
+                                    <div class="wptheader_nav_menu_section">
+                                        <img src="wpt-logo-pro.svg" alt="WebPageTest Pro">
+                                    </div>
+                                    <div class="wptheader_nav_menu_section">
+                                        <ul>
+                                            <li class="wptheader_nav_menu_link"><a href="/">Here's a link</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="/">Here's a link</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="/">Here's a link</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="wptheader_nav_menu_section">
+                                        <p class="wptheader_nav_cta">
+                                            <span>Ready to go <strong>Pro?</strong></span>
+                                            <a href="#">Compare Plans</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </details>
+                        </li>
+                        <li><a href="/products/pricing">Pricing</a></li>
+                        <li><a href="https://docs.webpagetest.org/">Docs</a></li>
+                        <li class="wptheader_nav_menu">
+                            <details>
+                                <summary>Resources</summary>
+                                <div class="wptheader_nav_menu_content">
+                                    <div class="wptheader_nav_menu_section">
+                                        <ul>
+                                            <li class="wptheader_nav_menu_link"><a href="#">Blog</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="#">Events</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="wptheader_nav_menu_section">
+                                        <p>Find us on...</p>
+                                        <ul class="wptheader_nav_menu_linkgrid">
+                                            <li class="wptheader_nav_menu_link"><a href="#">Twitter</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="#">Youtube</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="#">LinkedIn</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="#">Github</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </details>
+                        </li>
+                        <li><a href="/why-wpt">Why WebPageTest</a></li>
+                    </ul>
+                    <ul class="wptheader_acct">
+                        <li><a href="/account">My Account</a></li>
+                        <li>
+                            <form method='POST' action='/logout' class='logout-form'><button type='submit'>Logout</button></form>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </header>
+    </wpt-header>
+    <script src="wpt-header.js"></script>
+</body>
+
+</html>
