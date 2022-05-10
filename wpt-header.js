@@ -22,21 +22,20 @@ class WptHeader extends HTMLElement {
         this.menuHovers();
     }
     menuHovers() {
-        let menuDisplay = getComputedStyle(this.menubtn).display;
         let that = this;
         this.details.forEach(function(detail) {
             detail.addEventListener("mouseenter", function() {
-                if (menuDisplay === "none") {
+                if (that.menuDisplay() === "none") {
                     this.open = true;
                 }
             });
             detail.addEventListener("mouseleave", function() {
-                if (menuDisplay === "none") {
+                if (that.menuDisplay() === "none") {
                     this.open = false;
                 }
             });
             detail.addEventListener("click", function(e) {
-                if (menuDisplay === "none") {
+                if (that.menuDisplay() === "none") {
                     that.details.forEach(function(otherdeet) {
                         if (otherdeet !== e.target) {
                             otherdeet.open = false;
@@ -46,9 +45,11 @@ class WptHeader extends HTMLElement {
             });
         });
     }
+    menuDisplay() {
+        return getComputedStyle(this.menubtn).display;
+    }
     updateMenuAttrs() {
-        let menuDisplay = getComputedStyle(this.menubtn).display;
-        if (menuDisplay === "none") {
+        if (this.menuDisplay() === "none") {
             this.menu.open = true;
         } else {
             this.menu.open = false;
