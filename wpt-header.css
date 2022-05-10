@@ -94,10 +94,10 @@ wpt-header li summary {
     font-size: 1.1rem;
     font-weight: 500;
     white-space: nowrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    
+    
+    
+    
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
@@ -122,7 +122,7 @@ wpt-header li summary {
 }
 
 .wptheader_nav_menu_content {
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem 1rem;
     background: #fff;
     color: #222;
 }
@@ -148,19 +148,32 @@ wpt-header li summary {
     font-size: 1em;
     border: 0;
 }
-
-.wptheader_nav_menu summary:after {
+.wptheader_nav_menu a span,
+.wptheader_nav_menu summary span {
+    display: flex;
+    align-items: center;
+    line-height: 1.3;
+    justify-content: space-between;
+    width: 100%;
+}
+.wptheader_nav_menu summary span:after {
     content: "";
     border-top: 5px solid #fff;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     vertical-align: middle;
     margin-left: .5rem;
+/* display: flex; */}
+.wptheader_nav_menu details[open] summary span:after {
+    border-top-color:  #1e4078;
 }
 
+.wptheader-current span {
+    background: #101825;
+}
 wpt-header .wptheader_nav_menu_link a {
     padding: .5em 0;
-    color: #1e4078;
+    color: #1E4078;
     text-decoration: underline;
     font-size: 1rem;
 }
@@ -186,13 +199,27 @@ wpt-header .wptheader_nav_menu_link a {
 .wptheader_nav_cta a {
     background: #1E4078;
     border-radius: 2em;
-    padding: .5em 1em;
+    padding: .6em 1em;
     color: #fff;
     font-weight: 700;
     font-size: 1rem;
 }
+.wptheader_nav li>a:hover span,
+.wptheader_nav li>a:focus span,
+.wptheader_nav li details[open] {
+    background: #fff;
+}
 
-@media (min-width: 70em) {
+.wptheader_nav li>a:hover span,
+.wptheader_nav li>a:focus span,
+.wptheader_nav li details[open] summary span,
+.wptheader_nav li details:focus summary span
+.wptheader_nav li details summary:hover span {
+    background: #fff;
+    color: #1E4078;
+}
+
+@media (min-width: 80em) {
     wpt-header header {
         flex-flow: row nowrap;
         height: auto;
@@ -229,13 +256,15 @@ wpt-header .wptheader_nav_menu_link a {
         gap: 1.5rem;
     }
     wpt-header nav ul li {
-        /* position: relative; */
+        display: flex;
     }
+    
     wpt-header nav ul li .wptheader_nav_menu_content {
         position: absolute;
-        top: 8rem;
+        top: calc(100% + 4px);
         box-shadow: 0 5px 5px rgb(0 0 0 / 21%);
         min-width: 15rem;
+        padding-top: 1rem;
     }
     wpt-header li>a,
     wpt-header li summary {
@@ -251,7 +280,7 @@ wpt-header .wptheader_nav_menu_link a {
         border: 0;
         max-width: 1400px;
         margin: 0 auto;
-        height: 8rem;
+        height: 6rem;
     }
     .wptheader_logo {
         background: none;
@@ -262,7 +291,26 @@ wpt-header .wptheader_nav_menu_link a {
     }
     .wptheader_nav li>a,
     .wptheader_nav li summary {
-        font-size: 1.1rem;
+        font-size: 1rem;
         border: none;
+        font-size: 1rem;
+        border: none;
+        display: flex;
+        align-content: center;
+    line-height: 6;}
+    .wptheader_nav li>a span,
+    .wptheader_nav li summary span {
+        line-height: 1.3;
+        display: flex;
+        padding: .5em;
+        border-radius: 2em;
+    }
+    
+    .wptheader_nav_menu_content li> a,
+    .wptheader_nav_menu_content summary {
+        line-height: 1.3;
+    }
+    .wptheader_nav li details[open] {
+    background: transparent;
     }
 }
