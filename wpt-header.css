@@ -116,9 +116,6 @@ wpt-header li summary {
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
 
-.wptheader_nav li>a,
-.wptheader_nav li>button {}
-
 .wptheader_nav details[open] .wptheader_nav_menu_content {
     background: #fff;
 }
@@ -161,6 +158,12 @@ wpt-header li summary {
     color: #fff;
     font-size: 1em;
     border: 0;
+    cursor: pointer;
+}
+
+.wptheader_acct a:hover,
+.wptheader_acct button:hover {
+    text-decoration: underline
 }
 
 .wptheader_nav_menu a span,
@@ -179,7 +182,6 @@ wpt-header li summary {
     border-left: 4px solid transparent;
     vertical-align: middle;
     margin-left: .5rem;
-    /* display: flex; */
 }
 
 .wptheader_nav_menu details[open] summary span:after {
@@ -211,7 +213,6 @@ wpt-header .wptheader_nav_menu_link:before {
     border-bottom: 5px solid transparent;
     width: 0;
     height: 0;
-    /* display: inline-block; */
 }
 
 .wptheader_nav_menu_section img {
