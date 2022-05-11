@@ -54,7 +54,7 @@ class WptHeader extends HTMLElement {
         if (this.menuDisplay() === "none") {
             this.menu.open = true;
         } else {
-            this.menu.open = false;
+            //this.menu.open = false;
         }
 
     }
