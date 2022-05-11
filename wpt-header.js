@@ -35,12 +35,14 @@ class WptHeader extends HTMLElement {
                 }
             });
             detail.addEventListener("click", function(e) {
-                if (that.menuDisplay() === "none") {
-                    that.details.forEach(function(otherdeet) {
-                        if (otherdeet !== e.target) {
-                            otherdeet.open = false;
-                        }
-                    });
+                if( e.target.closest("summary") ){
+                    if (that.menuDisplay() === "none") {
+                        that.details.forEach(function(otherdeet) {
+                            if (otherdeet !== e.target) {
+                                otherdeet.open = false;
+                            }
+                        });
+                    }
                 }
             });
         });
