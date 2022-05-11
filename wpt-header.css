@@ -86,6 +86,9 @@ wpt-header ul,
     margin: 0;
     padding: 0;
 }
+wpt-header summary::-webkit-details-marker {
+    display: none;
+}
 
 wpt-header li>a,
 wpt-header li summary {
