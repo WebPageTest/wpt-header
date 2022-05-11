@@ -394,3 +394,30 @@ wpt-header .wptheader_nav_menu_content li {
         background: transparent;
     }
 }
+
+
+/* animation */
+@media (prefers-reduced-motion: no-preference){
+    @media (max-width: 80em){
+        wpt-header .wptheader_menu nav {
+            transform: translateX(100%);
+            transition: transform .2s ease-out;
+        transition-delay: .1s;}
+        wpt-header .wptheader_menu[open] nav {
+            transform: translateX(0%);
+        }
+    }
+    @media (min-width: 80em){
+             
+        wpt-header .wptheader_nav_menu .wptheader_nav_menu_content {
+            max-height: 0;
+            transition: all .5s ease-out;
+           transition-delay: .1s;
+            will-change: max-height;
+        overflow: hidden;transform: rotateZ(0deg);}
+        wpt-header .wptheader_nav_menu details[open] .wptheader_nav_menu_content {
+            max-height: 100vh;
+        }
+    }
+    
+}
