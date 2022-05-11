@@ -35,7 +35,7 @@ class WptHeader extends HTMLElement {
                 }
             });
             detail.addEventListener("click", function(e) {
-                if( e.target.closest("summary") ){
+                if (e.target.closest("summary")) {
                     if (that.menuDisplay() === "none") {
                         that.details.forEach(function(otherdeet) {
                             if (otherdeet !== e.target) {

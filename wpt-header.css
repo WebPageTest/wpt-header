@@ -86,17 +86,21 @@ wpt-header ul,
     margin: 0;
     padding: 0;
 }
+
 .wptheader_nav ul.wptheader_nav_menu_linkgrid {
     display: flex;
     flex-flow: row wrap;
 }
+
 .wptheader_nav ul.wptheader_nav_menu_linkgrid li {
     flex: 1 1 50%;
     display: flex;
 }
+
 .wptheader_nav ul.wptheader_nav_menu_linkgrid li:before {
     display: none;
 }
+
 wpt-header summary::-webkit-details-marker {
     display: none;
 }
@@ -108,10 +112,6 @@ wpt-header li summary {
     font-size: 1.1rem;
     font-weight: 500;
     white-space: nowrap;
-    
-    
-    
-    
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, .2);
 }
@@ -162,6 +162,7 @@ wpt-header li summary {
     font-size: 1em;
     border: 0;
 }
+
 .wptheader_nav_menu a span,
 .wptheader_nav_menu summary span {
     display: flex;
@@ -170,6 +171,7 @@ wpt-header li summary {
     justify-content: space-between;
     width: 100%;
 }
+
 .wptheader_nav_menu summary span:after {
     content: "";
     border-top: 5px solid #fff;
@@ -177,22 +179,26 @@ wpt-header li summary {
     border-left: 4px solid transparent;
     vertical-align: middle;
     margin-left: .5rem;
-/* display: flex; */}
-.wptheader_nav_menu details[open] summary span:after {
-    border-top-color:  #1e4078;
+    /* display: flex; */
 }
 
+.wptheader_nav_menu details[open] summary span:after {
+    border-top-color: #1e4078;
+}
 
 wpt-header .wptheader_nav_menu_link a {
     padding: .5em 0;
     color: #1E4078;
     text-decoration: none;
     font-size: 1rem;
-font-weight: 700;}
+    font-weight: 700;
+}
+
 wpt-header .wptheader_nav_menu_link a:hover,
 wpt-header .wptheader_nav_menu_link a:focus {
     text-decoration: underline;
 }
+
 wpt-header a.wptheader-current {
     cursor: default;
     pointer-events: none;
@@ -203,7 +209,11 @@ wpt-header .wptheader_nav_menu_link:before {
     border-left: 5px solid green;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-width: 0;height: 0;/* display: inline-block; */}
+    width: 0;
+    height: 0;
+    /* display: inline-block; */
+}
+
 .wptheader_nav_menu_section img {
     max-width: 60%;
 }
@@ -236,6 +246,7 @@ wpt-header .wptheader_nav_menu_content li {
     font-weight: 700;
     font-size: 1rem;
 }
+
 .wptheader_nav li details[open] {
     background: #fff;
     color: #1e4078;
@@ -248,29 +259,26 @@ wpt-header .wptheader_nav_menu_content li {
     background: #fff;
     color: #1E4078;
 }
+
 .wptheader_nav_menu details:hover summary span:after,
 .wptheader_nav_menu details:focus summary span:after {
-    border-top-color:  #1e4078;
+    border-top-color: #1e4078;
 }
 
 @media (min-width: 80em) {
-    
     .wptheader_nav li>a:hover,
-.wptheader_nav li>a:focus,
-.wptheader_nav details:hover summary,
-.wptheader_nav details:focus summary {
-    background: transparent;
-}
-
-.wptheader_nav li>a:hover span,
-.wptheader_nav li>a:focus span,
-.wptheader_nav li details[open] summary span,
-.wptheader_nav li details:focus summary span
-.wptheader_nav li details summary:hover span {
-    background: #fff;
-    color: #1E4078;
-}
-
+    .wptheader_nav li>a:focus,
+    .wptheader_nav details:hover summary,
+    .wptheader_nav details:focus summary {
+        background: transparent;
+    }
+    .wptheader_nav li>a:hover span,
+    .wptheader_nav li>a:focus span,
+    .wptheader_nav li details[open] summary span,
+    .wptheader_nav li details:focus summary span .wptheader_nav li details summary:hover span {
+        background: #fff;
+        color: #1E4078;
+    }
     wpt-header header {
         flex-flow: row nowrap;
         height: auto;
@@ -308,16 +316,17 @@ wpt-header .wptheader_nav_menu_content li {
     }
     wpt-header nav ul li {
         display: flex;
-    align-items: center;gap: .5em;}
-    
+        align-items: center;
+        gap: .5em;
+    }
     wpt-header nav ul li .wptheader_nav_menu_content {
         position: absolute;
         top: calc(100%);
         box-shadow: 0 5px 5px rgb(0 0 0 / 21%);
         min-width: 15rem;
         padding-top: 1rem;
-    line-height: 1.3rem;}
-    
+        line-height: 1.3rem;
+    }
     wpt-header nav ul li .wptheader_nav_menu_content:before {
         content: "";
         position: absolute;
@@ -358,23 +367,29 @@ wpt-header .wptheader_nav_menu_content li {
         border: none;
         display: flex;
         align-content: center;
-    align-self: center;height: 6rem;}
+        align-self: center;
+        height: 6rem;
+    }
     .wptheader_nav li>a span,
     .wptheader_nav li summary span {
         line-height: 1.3;
         display: flex;
         padding: .5em 1em;
         border-radius: 2em;
-    height: 1.3em;align-self: center;border: 1px solid transparent;}
-    wpt-header li > a.wptheader-current span,
-    wpt-header li > details summary.wptheader-current span{
-   
-border-color: rgba(255,255,255,.2);}
-    .wptheader_nav_menu_content li> a,
+        height: 1.3em;
+        align-self: center;
+        border: 1px solid transparent;
+    }
+    wpt-header li>a.wptheader-current span,
+    wpt-header li>details summary.wptheader-current span {
+        border-color: rgba(255, 255, 255, .2);
+    }
+    .wptheader_nav_menu_content li>a,
     .wptheader_nav_menu_content summary {
         line-height: 1.3;
-    height: auto;}
+        height: auto;
+    }
     .wptheader_nav li details[open] {
-    background: transparent;
+        background: transparent;
     }
 }
