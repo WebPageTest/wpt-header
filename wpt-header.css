@@ -58,11 +58,12 @@ wpt-header a {
 
 .wptheader_menu[open] .wptheader_menubtn {
     background-image: url(wpt-header-menubtn-close.svg);
+    background-color: #fff;
 }
 
 .wptheader_menubtn:hover,
 .wptheader_menubtn:focus {
-    background-color: ##597dbe
+    background-color: #fff;
 }
 
 .wptheader_menubtn-expanded {
@@ -397,25 +398,26 @@ wpt-header .wptheader_nav_menu_content li {
 
 
 /* animation */
-@media (prefers-reduced-motion: no-preference){
-    @media (max-width: 80em){
+
+@media (prefers-reduced-motion: no-preference) {
+    @media (max-width: 80em) {
         wpt-header .wptheader_menu nav {
             transform: translateX(100%);
             transition: transform .2s ease-out;
-        transition-delay: .1s;}
+            transition-delay: .1s;
+        }
         wpt-header .wptheader_menu[open] nav {
             transform: translateX(0%);
         }
     }
-    @media (min-width: 80em){
-             
+    @media (min-width: 80em) {
         wpt-header .wptheader_nav_menu .wptheader_nav_menu_content {
             transform: translateY(1em);
             transition: transform .2s ease-out;
-        transition-delay: .1s;}
+            transition-delay: .1s;
+        }
         wpt-header .wptheader_nav_menu details[open] .wptheader_nav_menu_content {
-           transform: translateY(0);
+            transform: translateY(0);
         }
     }
-    
 }
