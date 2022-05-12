@@ -82,6 +82,39 @@
             </details>
         </header>
     </wpt-header>
+
+
+
+
+    <p>Current nav structure in new header:</p>
+    <wpt-header>
+        <header>
+            <a class="wptheader_logo" href="/">
+                <img src="https://next.webpagetest.org/images/wpt-logo.svg" alt="WebPageTest, by Catchpoint" />
+            </a>
+            <details class="wptheader_menu">
+                <summary class="wptheader_menubtn">Menu:</summary>
+                <nav>
+                    <ul class="wptheader_nav">
+                        <li><a href="/" class="wptheader-current"><span>Start Test</span></a></li>
+                        <li><a href="/testlog/1/"><span>Test History</a></li>
+                        <li><a href="/testlog/1/"><span>API</a></li>
+                        <li><a href="/products/pricing"><span>Docs</span></a></li>
+                        <li><a href="https://docs.webpagetest.org/"><span>Blog</span></a></li>
+                        <li><a href="/why-wpt"><span>About</span></a></li>
+                    </ul>
+                    <ul class="wptheader_acct">
+                        <li><a href="/account">My Account</a></li>
+                        <li>
+                            <form method='POST' action='/logout' class='logout-form'><button type='submit'>Logout</button></form>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </header>
+    </wpt-header>
+
+
     <script src="wpt-header.js"></script>
 </body>
 

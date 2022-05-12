@@ -328,7 +328,7 @@ wpt-header .wptheader_nav_menu_content li {
         min-width: 15rem;
         padding-top: 2rem;
         line-height: 1.3rem;
-    }
+    z-index: 1000;}
     wpt-header nav ul li .wptheader_nav_menu_content:before {
         content: "";
         position: absolute;
