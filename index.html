@@ -5,13 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebPageTest Global Nav</title>
-    <link rel="stylesheet" href="https://scott.webpagetest.org/wpt-header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Open Sans';
+            src: url('https://webpagetest.org/fonts/opensans-light-webfont.woff2') format('woff2'), url('https://webpagetest.org/fonts/opensans-light-webfont.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Open Sans';
+            src: url('https://webpagetest.org/fonts/opensans-regular-webfont.woff2') format('woff2'), url('https://webpagetest.org/fonts/opensans-regular-webfont.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        @font-face {
+            font-family: 'Open Sans';
+            src: url('https://webpagetest.org/fonts/opensans-bold-webfont.woff2') format('woff2'), url('https://webpagetest.org/fonts/opensans-bold-webfont.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="https://webpagetest.org/wpt-header.css">
+    <script src="https://webpagetest.org/wpt-header.js" defer></script>
 </head>
 
 <body>
+
+    <p>WPT Current Global Header: (This header is live currently on WebPageTest.org)</p>
+
     <wpt-header>
         <header>
             <a class="wptheader_logo" href="/">
@@ -21,63 +47,91 @@
                 <summary class="wptheader_menubtn">Menu:</summary>
                 <nav>
                     <ul class="wptheader_nav">
-                        <li><a href="/" class="wptheader-current"><span>Start Test</span></a></li>
-                        <li><a href="/testlog/1/"><span>Test History</a></li>
+                        <li><a class="wptheader-current" tabindex="-1" href="/"><span>Start Test</span></a></li>
+                        <li><a href="/testlog/1/"><span>Test History</span></a></li>
+                        <li><a href="https://product.webpagetest.org/api"><span>API</span></a></li>
+                        <li><a title="Forums (opens in a new tab)" href="https://forums.webpagetest.org/" target="_blank" rel="noopener"><span>Forums</span></a></li>
+                        <li><a title="Docs (opens in a new tab)" href="https://docs.webpagetest.org/" target="_blank" rel="noopener"><span>Docs</span></a></li>
+                        <li><a title="Blog (opens in a new tab)" href="https://blog.webpagetest.org/" target="_blank" rel="noopener"><span>Blog</span></a></li>
+                        <li><a href="/about"><span>About</span></a></li>
+                    </ul>
+                    <ul class="wptheader_acct">
+                        <li><a href="/saml/login.php">Login</a></li>
+                        <li><a href='https://app.webpagetest.org/ui/entry/wpt/signup' onclick="try{if(_gaq!=undefined){_gaq.push(['_trackEvent','Outbound','Click','Signup']);}}catch(err){}">Sign-up</a></li>
+                    </ul>
+                </nav>
+            </details>
+        </header>
+    </wpt-header>
+
+    <p>WPT Next Global Header: (This header will go live in June with WebPageTest Pro)</p>
+
+    <wpt-header>
+        <header>
+            <a class="wptheader_logo" href="/">
+                <img src="https://webpagetest.org/images/wpt-logo.svg" alt="WebPageTest, by Catchpoint" />
+            </a>
+            <details class="wptheader_menu">
+                <summary class="wptheader_menubtn">Menu:</summary>
+                <nav>
+                    <ul class="wptheader_nav">
+                        <li><a href="/"><span>Start Test</span></a></li>
+                        <li><a href="https://webpagetest.org/testlog/1/"><span>Test History</span></a></li>
                         <li class="wptheader_nav_menu">
                             <details>
                                 <summary><span>Products</span></summary>
                                 <div class="wptheader_nav_menu_content">
                                     <div class="wptheader_nav_menu_section">
-                                        <img src="https://next.webpagetest.org/images/wpt-logo-pro.svg" alt="WebPageTest Pro">
+                                        <img src="wpt-logo-pro-dark.svg" alt="WebPageTest Pro">
                                     </div>
                                     <div class="wptheader_nav_menu_section">
                                         <ul>
-                                            <li class="wptheader_nav_menu_link"><a href="/">Opportunities &
-													Experiments</a></li>
-                                            <li class="wptheader_nav_menu_link"><a href="/">API</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="https://webpagetest.org/products/experiments">Opportunities & Experiments</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="https://webpagetest.org/products/api">API</a></li>
                                         </ul>
                                     </div>
                                     <div class="wptheader_nav_menu_section">
                                         <p class="wptheader_nav_cta">
                                             <span>Ready to go <strong>Pro?</strong></span>
-                                            <a href="#">Compare Plans</a>
+                                            <a href="https://webpagetest.org/products/pricing">Compare Plans</a>
                                         </p>
                                     </div>
                                 </div>
                             </details>
                         </li>
-                        <li><a href="/products/pricing"><span>Pricing</span></a></li>
-                        <li><a href="https://docs.webpagetest.org/"><span>Docs</span></a></li>
+
+
+
+                        <li><a href="https://webpagetest.org/products/pricing"><span>Pricing</span></a></li>
+
+
                         <li class="wptheader_nav_menu">
                             <details>
                                 <summary><span>Resources</span></summary>
                                 <div class="wptheader_nav_menu_content">
                                     <div class="wptheader_nav_menu_section">
                                         <ul>
-                                            <li class="wptheader_nav_menu_link"><a href="#">Blog</a></li>
-                                            <li class="wptheader_nav_menu_link"><a href="#">Events</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="https://docs.webpagetest.org/">Docs</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="https://blog.webpagetest.org/">Blog</a></li>
+                                            <li class="wptheader_nav_menu_link"><a href="https://events.webpagetest.org/">Events</a></li>
                                         </ul>
                                     </div>
                                     <div class="wptheader_nav_menu_section">
-                                        <p>Find us on...</p>
+                                        <p class="wptheader_nav_cta">Find us on...</p>
                                         <ul class="wptheader_nav_menu_linkgrid">
-                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/twitter.svg" alt=""><a href="#">Twitter</a></li>
-                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/youtube.svg" alt=""><a href="#">Youtube</a></li>
-                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/linkedin.svg" alt=""><a href="#">LinkedIn</a></li>
-                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/github.svg" alt=""><a href="#">Github</a></li>
+                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/twitter.svg" alt=""><a href="#https://twitter.com/RealWebPageTest">Twitter</a></li>
+                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/youtube.svg" alt=""><a href="https://www.youtube.com/channel/UC5CqJ9V7cQddZDf1DKXcy7Q">Youtube</a></li>
+                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/linkedin.svg" alt=""><a href="https://www.linkedin.com/company/webpagetest/">LinkedIn</a></li>
+                                            <li class="wptheader_nav_menu_link"><img src="https://webpagetest.org/images/github.svg" alt="https://github.com/WPO-Foundation/webpagetest/"><a href="#">Github</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </details>
                         </li>
-                        <li><a href="/why-wpt"><span>Why WebPageTest</span></a></li>
+
+                        <li><a href="https://webpagetest.org/why-webpagetest"><span>Why WebPageTest</span></a></li>
                     </ul>
-                    <ul class="wptheader_acct">
-                        <li><a href="/account">My Account</a></li>
-                        <li>
-                            <form method='POST' action='/logout' class='logout-form'><button type='submit'>Logout</button></form>
-                        </li>
-                    </ul>
+
                 </nav>
             </details>
         </header>
@@ -86,7 +140,71 @@
 
 
 
-    <script src="https://scott.webpagetest.org/wpt-header.js"></script>
+    <!-- USAGE NOTES -->
+    <style>
+        /* demo page only*/
+        
+        .demo {
+            margin: 3rem auto;
+            padding: 0 3rem;
+            max-width: 1400px;
+            font-family: Open Sans, sans-serif;
+        }
+        
+        .demo pre {
+            background-color: #eee;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            font-size: .9rem;
+            max-width: 100%;
+            overflow: auto;
+        }
+    </style>
+    <div class="demo">
+        <h2>How to use the header:</h2>
+        <p>The header is coded as a web component. The HTML is meant to be hand-edited, particularly to suit the links needed for a given nav structure. It is wrapped in a <code>&lt;wpt-header&gt;&lt;/wpt-header&gt;</code>.</p>
+        <p>The header has two external dependencies:</p>
+        <ul>
+            <li>Place these references in the <code>head</code>. Be sure the script has a defer attribute.
+                <pre><code>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://webpagetest.org/wpt-header.css&quot;&gt;
+&lt;script src=&quot;https://webpagetest.org/wpt-header.js&quot; defer&gt;&lt;/script&gt;
+                </code></pre>
+            </li>
+            <li>Fonts: if the site does not already load the Open Sans font, you can get it here on our domain:
+                <pre><code>
+&lt;style&gt;
+    @font-face {
+        font-family: &apos;Open Sans&apos;;
+        src: url(&apos;https://webpagetest.org/fonts/opensans-light-webfont.woff2&apos;) format(&apos;woff2&apos;),
+                url(&apos;https://webpagetest.org/fonts/opensans-light-webfont.woff&apos;) format(&apos;woff&apos;);
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: &apos;Open Sans&apos;;
+        src: url(&apos;https://webpagetest.org/fonts/opensans-regular-webfont.woff2&apos;) format(&apos;woff2&apos;),
+                url(&apos;https://webpagetest.org/fonts/opensans-regular-webfont.woff&apos;) format(&apos;woff&apos;);
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: &apos;Open Sans&apos;;
+        src: url(&apos;https://webpagetest.org/fonts/opensans-bold-webfont.woff2&apos;) format(&apos;woff2&apos;),
+                url(&apos;https://webpagetest.org/fonts/opensans-bold-webfont.woff&apos;) format(&apos;woff&apos;);
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+&lt;/style&gt;
+                </code></pre>
+            </li>
+        </ul>
+
+    </div>
 </body>
 
 </html>
